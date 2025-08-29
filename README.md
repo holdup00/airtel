@@ -1,3 +1,16 @@
+composer require osenco/airtel
+use Osen\Airtel\Collection;
+
+$collectAPI = new Collection([
+    'env'           => 'live',
+    'client_id'     => 'TON_CLIENT_ID',
+    'client_secret' => 'TON_CLIENT_SECRET',
+    'public_key'    => 'TA_CLE_PUBLIQUE',
+    'country'       => 'CD',
+    'currency'      => 'CDF'
+]);
+
+$collectAPI->authorize()->ussdPush($numero_telephone, $montant);
 # Airtel Money API PHP SDK
 Airtel Money API PHP SDK
 
